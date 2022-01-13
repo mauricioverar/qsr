@@ -1,11 +1,11 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <div class="q-pa-md q-gutter-sm">
+    <q-btn outline rounded color="primary" label="Elija - piedra, papel o tijera" />
+    <br>
+    <q-btn class="glossy" round color="primary" icon="las la-hand-rock" size="xl" />
+    <q-btn class="glossy" round color="secondary" icon="las la-hand-paper" size="xl"/>
+    <q-btn class="glossy" round color="deep-orange" icon="las la-hand-scissors" size="xl"/>
+  </div>
 </template>
 
 <script>
