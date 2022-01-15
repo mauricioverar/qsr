@@ -28,14 +28,49 @@
         <q-item-label
           header
         >
-          Essential Links
+        <q-item clickable v-ripple to="/" active-class="my-menu-link">
+          Juegos
+          </q-item>
         </q-item-label>
+        <q-item clickable v-ripple to="/cachipun" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="content_cut"/>
+          </q-item-section>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+          <q-item-section>Cachipún</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/gato" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="highlight_off"/>
+          </q-item-section>
+
+          <q-item-section>Gato</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/puzzle" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="exit_to_app"/>
+          </q-item-section>
+
+          <q-item-section>Puzzle</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/about" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="exit_to_app"/>
+          </q-item-section>
+
+          <q-item-section>about</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/form" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="exit_to_app"/>
+          </q-item-section>
+
+          <q-item-section>form</q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -46,71 +81,23 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
 
 import { defineComponent, ref } from 'vue'
+import { useQuasar } from 'quasar' // importar $q
 
 export default defineComponent({
   name: 'MainLayout',
 
-  components: {
-    EssentialLink
-  },
-
-  setup () {
+  setup () { // composition API
     const leftDrawerOpen = ref(false)
+    const $q = useQuasar()
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
+      $q // exportar $q
     }
   }
 })

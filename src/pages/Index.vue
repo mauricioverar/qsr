@@ -1,11 +1,31 @@
 <template>
-  <div class="q-pa-md q-gutter-sm">
-    <q-btn outline rounded color="primary" label="Elija - piedra, papel o tijera" />
-    <br>
-    <q-btn @click="piedra" class="glossy" round color="primary" icon="las la-hand-rock" size="xl" />
-    <q-btn @click="papel" class="glossy" round color="secondary" icon="las la-hand-paper" size="xl"/>
-    <q-btn @click="tijera" class="glossy" round color="deep-orange" icon="las la-hand-scissors" size="xl"/>
-  </div>
+  <q-page padding class="q-ml-xs">
+    <h4 class="q-ml-xl q-pl-xl">Juegos</h4>
+    <q-btn
+    label="Cachipún"
+    color="secondary"
+    outline
+    class="q-ml-xs"
+    to="/cachipun"
+    icon="content_cut"
+    />
+    <q-btn
+    label="Gato"
+    color="secondary"
+    outline
+    class="q-ml-xs"
+    to="/gato"
+    icon="highlight_off"
+    />
+    <q-btn
+    label="Puzzle"
+    color="secondary"
+    outline
+    class="q-ml-xs"
+    to="/puzzle"
+    icon="exit_to_app"
+    />
+  </q-page>
 </template>
 
 <script>
