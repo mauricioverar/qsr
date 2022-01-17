@@ -55,6 +55,22 @@
 
           <q-item-section>Puzzle</q-item-section>
         </q-item>
+
+        <q-item clickable v-ripple to="/laberinto" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="sync_alt"/>
+          </q-item-section>
+
+          <q-item-section>Laberinto</q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/laberinto" active-class="my-menu-link">
+          <q-item-section avatar>
+            <q-icon name="sync_alt"/>
+          </q-item-section>
+
+          <q-item-section>Zener</q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
