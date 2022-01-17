@@ -55,22 +55,6 @@
 
           <q-item-section>Puzzle</q-item-section>
         </q-item>
-
-        <q-item clickable v-ripple to="/about" active-class="my-menu-link">
-          <q-item-section avatar>
-            <q-icon name="exit_to_app"/>
-          </q-item-section>
-
-          <q-item-section>about</q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/form" active-class="my-menu-link">
-          <q-item-section avatar>
-            <q-icon name="exit_to_app"/>
-          </q-item-section>
-
-          <q-item-section>form</q-item-section>
-        </q-item>
       </q-list>
     </q-drawer>
 

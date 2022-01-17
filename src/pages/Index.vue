@@ -1,5 +1,5 @@
 <template>
-  <q-page padding class="q-ml-xs">
+  <q-page padding>
     <h4 class="q-ml-xl q-pl-xl">Juegos</h4>
     <q-btn
     label="Cachipún"
