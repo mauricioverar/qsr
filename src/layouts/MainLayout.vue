@@ -48,7 +48,7 @@
           <q-item-section>Gato</q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/puzzle" active-class="my-menu-link">
+        <!-- <q-item clickable v-ripple to="/puzzle" active-class="my-menu-link">
           <q-item-section avatar>
             <q-icon name="exit_to_app"/>
           </q-item-section>
@@ -70,7 +70,7 @@
           </q-item-section>
 
           <q-item-section>Zener</q-item-section>
-        </q-item>
+        </q-item> -->
       </q-list>
     </q-drawer>
 

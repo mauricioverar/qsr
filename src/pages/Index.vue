@@ -17,14 +17,14 @@
     to="/gato"
     icon="highlight_off"
     />
-    <q-btn
+    <!-- <q-btn
     label="Puzzle"
     color="secondary"
     outline
     class="q-ml-xs"
     to="/puzzle"
     icon="exit_to_app"
-    />
+    /> -->
   </q-page>
 </template>
 
